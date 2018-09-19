@@ -9,5 +9,5 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => {
-  console.log(`Proxy server listening on port ${port}...`);
+  console.log(`AVH proxy server listening on port ${port}...`);
 });
