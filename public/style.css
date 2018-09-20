@@ -1,15 +1,9 @@
-#Info {
-  display: block;
+#ProductInfo {
+  flex: 1;
 }
 
-#CountDown {
-  margin-left: 5px;
-  display: inline-block;
-}
-
-#Related {
-  margin: 10%;
-  display: block;
+#Checkout {
+  flex: 1;
 }
 
 .productContainer {
