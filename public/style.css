@@ -1,15 +1,22 @@
 #ProductInfo {
   flex: 1;
+  padding-left: 9vmin;
 }
 
 #Checkout {
   flex: 1;
+  padding-right: 9vmin;
+}
+
+#Reviews {
+  padding-left: 3vmin;
 }
 
 .productContainer {
   display: flex;
   align-content: center;
   justify-content: center;
+  width: 100%;
 }
 
 .nav {
