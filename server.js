@@ -25,6 +25,31 @@ app.get('/api/helpful/:productId', (req, res) => {
     .then(json => res.status(202).send());
 });
 
+app.get('/api/checkout/:productId', (req, res) => {
+  fetch(`http://localhost:7777/checkout/${req.params.productId}`)
+    .then((res) => {
+      return res.json();
+    })
+    .then(json => res.send(json));
+});
+
+app.get('/api/relatedItems', (req, res) => {
+  fetch(`http://localhost:4043/product?id=${req.query.id}`)
+    .then((res) => {
+      return res.json();
+    })
+    .then(json => res.send(JSON.stringify(json)));
+});
+
+app.get('/api/products/', (req, res) => {
+  fetch(`http://localhost:9001/get?id=${req.query.id}`)
+    .then(response => {
+      return response.json()
+    }).then(json => {
+      res.send(json)
+    });
+});
+
 app.listen(port, () => {
   console.log(`AVH proxy server listening on port ${port}...`);
 });
