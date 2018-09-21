@@ -10,7 +10,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/reviews/:productId', (req, res) => {
-  fetch(`http://localhost:1337/reviews/${req.params.productId}`)
+  fetch(`http://ec2-54-193-46-143.us-west-1.compute.amazonaws.com/reviews/${req.params.productId}`)
     .then((res) => {
       return res.json();
     })
@@ -18,7 +18,7 @@ app.get('/api/reviews/:productId', (req, res) => {
 });
 
 app.get('/api/helpful/:productId', (req, res) => {
-  fetch(`http://localhost:1337/helpful/${req.params.productId}`)
+  fetch(`http://ec2-54-193-46-143.us-west-1.compute.amazonaws.com/helpful/${req.params.productId}`)
     .then((res) => {
       // do nothing
     })
